@@ -9,6 +9,12 @@
 - **Checking port for server**
 - **Maybe something else**
 
+## Installation
+
+- put ```main.py fami_cfg.json``` to your server dir.
+
+- launch ```main.py``` and it's just work.
+
 ## Settings
 
 Just open ```fami_cfg.json```
