@@ -2,8 +2,6 @@ import socket
 import subprocess
 import time
 import json
-import os
-import signal
 
 
 def port_check(port: int) -> bool:
@@ -11,8 +9,6 @@ def port_check(port: int) -> bool:
     location = ("127.0.0.1", port)
     result_of_check = a_socket.connect_ex(location)
     return True if result_of_check == 0 else False
-
-
 
 
 class FAMI:
@@ -41,7 +37,7 @@ class FAMI:
             json.dump(data, f)
 
     def start_server(self):
-        self.server_proc = subprocess.Popen("kissmp-server.exe",shell=False)
+        self.server_proc = subprocess.Popen("kissmp-server.exe", shell=False)
 
     def shutdown_server(self):
         self.server_proc.kill()
@@ -61,5 +57,6 @@ if __name__ == "__main__":
             print(f'[FAMI] Next map is {map}')
             time.sleep(fami.timeout)
             fami.change_map(map)
+            print(f'[FAMI] Change map and restart server')
             fami.shutdown_server()
             fami.start_server()
