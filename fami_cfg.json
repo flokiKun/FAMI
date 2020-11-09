@@ -1,5 +1,5 @@
 {
-  "timeout": 180,
+  "timeout": 600,
   "maplist": [
     "automation_test_track",
     "hirochi_raceway",
