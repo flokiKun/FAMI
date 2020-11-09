@@ -1,0 +1,8 @@
+{
+  "timeout": 180,
+  "maplist": [
+    "automation_test_track",
+    "hirochi_raceway",
+    "Industrial"
+  ]
+}
